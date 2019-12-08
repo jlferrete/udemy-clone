@@ -1,8 +1,8 @@
-$principal: #33C3F0;
-$secundario: #741d51;
-$terciario: #e44e52;
-$gris: #f2f2f2;
-$blanco: #ffffff;
+@import 'variables';
+body {
+    font-family: $fuente_principal;
+}
+
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;

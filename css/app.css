@@ -1,3 +1,10 @@
+/* Variables */
+/* Colores */
+/* Fuentes */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
 .contenedor {
   max-width: 1100px;
   margin: 0 auto;
