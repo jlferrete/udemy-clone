@@ -1,6 +1,6 @@
 /* Variables */
-/* Colores */
 /* Fuentes */
+/* Colores */
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -49,6 +49,16 @@ body {
 
 .carrito-compras:hover .contenido .boton {
   background-color: #33C3F0;
+  padding: .5rem 1rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  background-color: #741d51;
   padding: .5rem 1rem;
   margin-top: 1rem;
   display: block;
