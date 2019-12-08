@@ -1,4 +1,17 @@
-$rojo: red;
-body {
-    background-color: $rojo;
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.oculto {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding: 1.4rem 0;
+    }
 }
