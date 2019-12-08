@@ -24,5 +24,8 @@
     "browserList": [
         "> 1%",
         "last 2 versions"
-    ]
+    ],
+    "dependencies": {
+        "postcss-scss": "^2.0.0"
+    }
 }

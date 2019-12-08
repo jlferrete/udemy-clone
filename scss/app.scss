@@ -1,3 +1,8 @@
+$principal: #33C3F0;
+$secundario: #741d51;
+$terciario: #e44e52;
+$gris: #f2f2f2;
+$blanco: #ffffff;
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
@@ -13,5 +18,29 @@
     align-items: center;
     .logo {
         padding: 1.4rem 0;
+    }
+}
+
+.carrito-compras {
+    position: relative;
+    &:hover .contenido {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $gris;
+        padding: 1rem;
+        max-width: 400px;
+        img {
+            max-width: 150px;
+        }
+        .boton {
+            background-color: $principal;
+            padding: .5rem 1rem;
+            margin-top: 1rem;
+            display: block;
+            text-align: center;
+            color: $blanco;
+            text-decoration: none;
+        }
     }
 }
