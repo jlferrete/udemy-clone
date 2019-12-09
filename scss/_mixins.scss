@@ -7,3 +7,7 @@
     color: $blanco;
     text-decoration: none;
 }
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}

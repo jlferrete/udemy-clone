@@ -1,7 +1,17 @@
 @import 'variables';
 @import 'mixins';
+html {
+    @include box-sizing(border-box);
+}
+
 body {
     font-family: $fuente_principal;
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
 }
 
 .contenedor {
@@ -38,8 +48,4 @@ body {
             @include boton($principal);
         }
     }
-}
-
-input[type="submit"] {
-    @include boton($secundario);
 }
