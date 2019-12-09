@@ -4,19 +4,28 @@ html {
     @include box-sizing(border-box);
 }
 
-body {
-    font-family: $fuente_principal;
-}
-
 *,
 *:after,
 *:before {
     @include box-sizing(inherit);
 }
 
+body {
+    font-family: $fuente_principal;
+}
+
 .contenedor {
     max-width: 1100px;
+    width: 90%;
     margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.centrado {
+    text-align: center;
 }
 
 .oculto {
@@ -34,18 +43,169 @@ body {
 
 .carrito-compras {
     position: relative;
+    .contenido {
+        display: none;
+    }
     &:hover .contenido {
         display: block;
         position: absolute;
         right: 0;
-        background-color: $gris;
+        background-color: $blanco;
         padding: 1rem;
-        max-width: 400px;
-        img {
-            max-width: 150px;
-        }
+        width: 400px;
         .boton {
-            @include boton($principal);
+            @include boton($secundario);
         }
+    }
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 24rem;
+    color: $blanco;
+    align-items: center;
+    display: flex;
+    .contenido-hero {
+        h2 {
+            font-family: $fuente_principal;
+            font-weight: 400;
+            font-size: 2.6rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        form {
+            position: relative;
+            @include tablet() {
+                width: 40%;
+            }
+            input[type="submit"] {
+                position: absolute;
+                right: 0;
+                top: .1rem;
+                text-decoration: none;
+                border: none;
+                text-indent: -9999px;
+                display: block;
+                background-image: url(../img/lupa.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: calc( 3rem - 10px);
+                height: calc( 3rem - 10px);
+                background-color: $blanco;
+            }
+            input[type="text"] {
+                width: 100%;
+                height: 3rem;
+            }
+        }
+    }
+}
+
+.barra {
+    min-height: 5rem;
+    background: #741d51;
+    color: $blanco;
+    @include gradiente($secundario, $terciario);
+    .iconos {
+        flex-direction: column;
+        @include desktop() {
+            flex-direction: row;
+        }
+        display: flex;
+        padding: 1.4rem 0;
+        .icono {
+            flex: 1;
+            background-repeat: no-repeat;
+            background-position: left center;
+            text-align: center;
+            background-size: 2.4rem;
+            &.icono1 {
+                background-image: url(../img/icono1.png);
+            }
+            &.icono2 {
+                background-image: url(../img/icono2.png);
+            }
+            &.icono3 {
+                background-image: url(../img/icono3.png);
+            }
+        }
+    }
+}
+
+
+/** Cursos **/
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    .curso {
+        .imagen-curso {
+            width: 100%;
+        }
+        flex: 0 1 calc(50% - 1rem);
+        @include tablet() {
+            flex: 0 1 calc(33% - 1rem);
+        }
+        @include desktop() {
+            flex: 0 1 calc(25% - 1rem);
+        }
+        background-color: $blanco;
+        margin-bottom: 1rem;
+        border: 1px solid #e1e1e1;
+        .info-curso {
+            padding: 1rem 1rem;
+            h4 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            .boton {
+                @include boton($primario);
+            }
+            .precio {
+                display: flex;
+                justify-content: space-between;
+                .oferta {
+                    text-decoration: line-through;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        @include telefono() {
+            flex-direction: row;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    @include telefono() {
+        flex: 1;
+    }
+    @include desktop() {
+        flex: 0 1 calc(30% - 1rem);
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        margin-bottom: .4rem;
     }
 }
